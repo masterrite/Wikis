@@ -33,7 +33,7 @@ code {
   line-height: 1.2;
 }
 .header .title a {
-  color: #f78769;
+  color: #120057;
   text-decoration: none;
   font: 700 3rem Lora-Bold;
   transition: 0.3s;
@@ -95,7 +95,7 @@ code {
   box-shadow: 0px 1px 5px #ddd;
 }
 .header .mobile-menu h3 a {
-  color: #f78769;
+  color: #120057;
   text-decoration: none;
   font: 700 1.6rem Lora-Bold;
   text-shadow: 1px 1px #fff, 2px 2px #f78769;
@@ -193,7 +193,7 @@ code {
 .post .post-title {
   margin: 0 0 0.5em;
   font: 1.953em Lora;
-  color: #777;
+  color: #120057;
 }
 .post .post-title::after {
   content: "";
