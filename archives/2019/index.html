@@ -1,112 +1,180 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        Writer&#39;s Block Wiki
+    </title>
+    <!-- favicon -->
     
-    <title>archive_b | Writer&#39;s Block Wiki</title>
-    <meta name="author" content="Hanwenheng Liu">
-    
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta property="og:site_name" content="Writer&#39;s Block Wiki">
-    <link href="/favicon.ico" rel="icon">
-    <link rel="stylesheet" href="/css/main.css" media="screen" type="text/css">
-    <script src="/js/jquery-2.0.3.min.js"></script>
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico">
+     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+
+    <script>
+        infiniteScroll()
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
+
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
+
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
+
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
+
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
 </head>
-</html>
-<body id="body" data-spy="scroll" data-target=".toc">
-    <header class="site-header">
-    <nav class="navbar navbar-static-top main-navbar" id="top">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/" class="navbar-brand brand-bootcdn text-hide">Home</a>
-            </div>
-            <nav id="bs-navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/about/">About</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </nav>
+
+<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h1>Writer&#39;s Block Wiki</h1>
-                <lebal class="glyphicon glyphicon-screenshot homepage-logo"></lebal>
-                <p>
-                    Background wiki for my writing ideas<br>
-                    <span class="package-amount">
-                        A total of <strong>1</strong> content
-                    </span>
-                </p>
-                <div class="search-wraper" role="search">
-                    <div class="form-group">
-                        <input class="form-control search clearable" type="text" id="local-search-input" name="q" results="0" placeholder="search notes..." autocomplete="off" autofocus tabindex="0" autocorrect="off" autocapitalize="off" spellcheck="false">
-                        <i class="fa fa-search"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <header class="header">
+    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/" class="logo">
+                Writer&#39;s Block Wiki
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
+
+    <button class="ipad-menu menu">menu</button>
+
+    <h1 class="title" id="main-title">
+        <a href="/" class="logo">
+            Writer&#39;s Block Wiki
+        </a>
+    </h1>
+    <h2 class="desc">
+        Collection of my writing
+    </h2>
+
+    <div class="links">
+        <ul>
+            
+            <li>
+                <a href="https://github.com/FrontendSophie">
+                    Github
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.linkedin.com/in/frontendsophie/">
+                    LinkedIn
+                </a>
+            </li>
+            
+        </ul>
     </div>
 </header>
-
-<div class="row page-data col-md-12">
-    <div id="local-search-result"></div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#notebook">
-                <i class="glyphicon glyphicon-equalizer"></i>NEWEST!
-            </a>
-        </div>
-        <div class="panel-collapse collapse in">
-            <div class="panel-body">
-                <ul class="post">
-                    
-                        
-                        <li class="post-list-item">
-                            <time datetime="it.date">2019-01-30</time>
-                            <a href="/2019/01/30/A Brief Guide to Alvar/" title="A Brief Guide to Alvar">A Brief Guide to Alvar</a>
-                        </li>
-                        
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="/js/search.js"></script>
-
-<script type="text/javascript">
-    var search_path = "search.xml";
-    if (search_path.length == 0) {
-    	search_path = "search.xml";
-    }
-    $("#local-search-input").wiki({
-        path: "/" + search_path,
-        dirdom: '#local-search-result'
-    });
-</script>
-
-
-    <footer>
-    <p>
+        <main class="main">
+            
+<section class="posts">
     
-    2019&nbsp;&copy;&nbsp;Hanwenheng Liu
-    . Theme by <a href="https://github.com/itaken/hexo-theme-wikiup/" title="Hexo-Theme-Wikiup" target="_blank">Wikiup</a>
-</p>
-<p>
-</p>
-<script src="/css/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <article class="post">
+            
+                    <h1 class="post-title">
+                        <a href="/2019/01/30/A Brief Guide to Alvar/">
+                            A Brief Guide to Alvar
+                        </a>
+                    </h1>
 
-    </footer>
+                    <ul class="post-date">
+                        <li>
+                            January 30, 2019
+                        </li>
+                        <li>
+                            Hanwenheng Liu
+                        </li>
+                    </ul>
+                    
+                        <div class="post-cover">
+                            <img src="/2019/01/30/A%20Brief%20Guide%20to%20Alvar/Alvar%20Map2.jpg">
+                        </div>
+                    
+                    <div class="post-content ">
+                        
+                            <a href="/2019/01/30/A Brief Guide to Alvar/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+</section>
+
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
+
+    
+
+            </section>
+            <section class="aside-section">
+                
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Alvar/">Alvar</a></li></ul>
+
+            </section>
+        </aside>
+    </div>
 </body>
+
 </html>
