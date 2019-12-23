@@ -20,7 +20,7 @@ pre {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #c7254e;
+  color: #0f0b7b;
   background-color: #f9f2f4;
   border-radius: 4px;
 }
@@ -241,7 +241,7 @@ code {
 .post .post-content {
   position: relative;
   color: #777;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5em;
   text-align: left;
