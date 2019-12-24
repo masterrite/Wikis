@@ -1,139 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="keywords" content="hexo, autumn" />
+    <title>
+        Writer&#39;s Block
+    </title>
+    <!-- favicon -->
     
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
+     
+<link rel="stylesheet" href="/css/style.css">
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
 
+    <script>
+        infiniteScroll()
 
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
 
-  <meta name="description" content="2014冬至故事——冬至神话"/>
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
 
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
 
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
 
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
-  <meta name="keywords" content="Winter Solstice Story,Naren,翻译,纳伦," />
+<body style="background: #f3f3f3">
+    <div class="container">
+        <header class="header">
+    <nav class="mobile-menu" style="background: #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/" class="logo">
+                Writer&#39;s Block
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
 
+    <button class="ipad-menu menu">menu</button>
 
-
-
-
-  <link rel="alternate" href="/default" title="Writer's Block">
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
-
-
-
-<link rel="canonical" href="masterrite.github.io/2019/12/23/2014冬至故事——冬至神话/"/>
-
-
-<meta name="description" content="冬至悄悄来临，脚步轻盈。今天是一年中白天最短的一天，而我们所在的地方又更靠北一些，所以白天的时间变得弥足珍贵。 老纳尔早早就把艾瑞思和我叫了回来——简直是太早。 “大黑天没啥猎物可打，也没啥好玩的，我敢肯定你们领教过这儿天黑后的厉害。快进来啊，让我们像这里淳朴的北方居民那样来度过这个夜晚。他们有个老传统，冬至和圣诞节时，大家都围在炉火旁，每人捧着一杯热茶或热可可，一起讲故事、玩儿个尽兴。”">
-<meta property="og:type" content="article">
-<meta property="og:title" content="2014冬至故事——冬至神话">
-<meta property="og:url" content="masterrite.github.io/2019/12/23/2014%E5%86%AC%E8%87%B3%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E5%86%AC%E8%87%B3%E7%A5%9E%E8%AF%9D/index.html">
-<meta property="og:site_name" content="Writer&#39;s Block">
-<meta property="og:description" content="冬至悄悄来临，脚步轻盈。今天是一年中白天最短的一天，而我们所在的地方又更靠北一些，所以白天的时间变得弥足珍贵。 老纳尔早早就把艾瑞思和我叫了回来——简直是太早。 “大黑天没啥猎物可打，也没啥好玩的，我敢肯定你们领教过这儿天黑后的厉害。快进来啊，让我们像这里淳朴的北方居民那样来度过这个夜晚。他们有个老传统，冬至和圣诞节时，大家都围在炉火旁，每人捧着一杯热茶或热可可，一起讲故事、玩儿个尽兴。”">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-12-23T22:37:00.000Z">
-<meta property="article:modified_time" content="2019-12-24T02:44:04.461Z">
-<meta property="article:author" content="Hanwenheng Liu">
-<meta property="article:tag" content="Winter Solstice Story">
-<meta property="article:tag" content="Naren">
-<meta property="article:tag" content="翻译">
-<meta property="article:tag" content="纳伦">
-<meta name="twitter:card" content="summary">
-
-
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
-<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
-
-
-
-
-
-<script type="text/javascript">
-  var themeConfig = {
-    fancybox: {
-      enable: false
-    },
-  };
-</script>
-
-
-
-
-  
-
-
-
-    <title> 2014冬至故事——冬至神话 - Writer's Block </title>
-  <meta name="generator" content="Hexo 4.2.0"></head>
-
-  <body>
-    <div id="page">
-      <header id="masthead"><div class="site-header-inner">
-    <h1 class="site-title">
-        <a href="/." class="logo">Writer's Block</a>
+    <h1 class="title" id="main-title">
+        <a href="/" class="logo">
+            Writer&#39;s Block
+        </a>
     </h1>
+    <h2 class="desc">
+        Collections of my writing
+    </h2>
 
-    <nav id="nav-top">
-        
-            <ul id="menu-top" class="nav-top-items">
-                
-                    <li class="menu-item">
-                        <a href="/archives">
-                            
-                            
-                                Archives
-                            
-                        </a>
-                    </li>
-                
-                    <li class="menu-item">
-                        <a href="/about">
-                            
-                            
-                                About
-                            
-                        </a>
-                    </li>
-                
-            </ul>
-        
-  </nav>
-</div>
-
-      </header>
-      <div id="content">
-        
-    <div id="primary">
-        
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          2014冬至故事——冬至神话
-        
-      </h1>
-
-      <time class="post-time">
-          Dec 23 2019
-      </time>
-    </header>
-
-
-
+    <div class="links">
+        <ul>
+            
+            <li>
+                <a href="https://github.com/masterrite" target="_blank" rel="noopener">
+                    Github
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.pixiv.net/member.php?id=32634360" target="_blank" rel="noopener">
+                    Pixiv
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</header>
+        <main class="main">
+            <article class="post">
     
-            <div class="post-content">
-            <p>冬至悄悄来临，脚步轻盈。今天是一年中白天最短的一天，而我们所在的地方又更靠北一些，所以白天的时间变得弥足珍贵。</p>
+    
+    <h4 class="post-cat">
+        <a href="/categories/Winter-Solstice-Story/">
+            Winter Solstice Story
+        </a>
+    </h4>
+    
+    
+    <h2 class="post-title">
+        2014冬至故事——冬至神话
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-12-23
+        </li>
+        <li>
+            Hanwenheng Liu
+        </li>
+    </ul>
+    <div class="post-content">
+        <p>冬至悄悄来临，脚步轻盈。今天是一年中白天最短的一天，而我们所在的地方又更靠北一些，所以白天的时间变得弥足珍贵。</p>
 <p>老纳尔早早就把艾瑞思和我叫了回来——简直是太早。</p>
 <p>“大黑天没啥猎物可打，也没啥好玩的，我敢肯定你们领教过这儿天黑后的厉害。快进来啊，让我们像这里淳朴的北方居民那样来度过这个夜晚。他们有个老传统，冬至和圣诞节时，大家都围在炉火旁，每人捧着一杯热茶或热可可，一起讲故事、玩儿个尽兴。”</p>
 <p>“像一家人一样。”艾瑞思接道。</p>
@@ -187,91 +194,35 @@
 <p>“纳尔，你下次讲的那个故事最好是讲这传统怎么来的！”我冲他撅了一下嘴。</p>
 <p>举着槲寄生的那个姑娘笑的好可爱。</p>
 
-            </div>
-          
-
-    
-      <footer class="post-footer">
-		
-		<div class="post-tags">
-		  
-			<a href="/tags/Winter-Solstice-Story/">Winter Solstice Story</a>
-		  
-			<a href="/tags/Naren/">Naren</a>
-		  
-			<a href="/tags/%E7%BF%BB%E8%AF%91/">翻译</a>
-		  
-			<a href="/tags/%E7%BA%B3%E4%BC%A6/">纳伦</a>
-		  
-		</div>
-		
-
-        
-        
-  <nav class="post-nav">
-    
-      <a class="prev" href="/2019/12/23/2015%20Winter%20Solstice%20Story%20-%20Coronation/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">2015 Winter Solstice Story - Coronation</span>
-        <span class="prev-text nav-mobile">Prev</span>
-      </a>
-    
-    
-      <a class="next" href="/2019/12/23/2014%20Winter%20Solstice%20Story%20-%20The%20Story%20of%20Winter%20Solstice/">
-        <span class="next-text nav-default">2014 Winter Solstice Story - The Story of Winter Solstice</span>
-        <span class="prev-text nav-mobile">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-    
-  </nav>
-
-        
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-      </footer>
-    
-  </article>
-
     </div>
+</article>
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
 
-      </div>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Wiki/">Wiki</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Winter-Solstice-Story/">Winter Solstice Story</a></li></ul>
 
-      <footer id="colophon"><span class="copyright-year">
-    
-        &copy;
-    
-    2019
-    <span class="footer-author">Hanwenheng Liu.</span>
-    <span class="power-by">
-        Powered by <a class="hexo-link" href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear" target="_blank" rel="noopener">Polar Bear</a>
-    </span>
-</span>
+            </section>
+            <section class="aside-section">
+                
+    <h1>Archives</h1>
 
-      </footer>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
 
-      <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
-      </div>
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Alvar/" rel="tag">Alvar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Naren/" rel="tag">Naren</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wiki/" rel="tag">Wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Winter-Solstice-Story/" rel="tag">Winter Solstice Story</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%B3%E4%BC%A6/" rel="tag">纳伦</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BF%BB%E8%AF%91/" rel="tag">翻译</a></li></ul>
+
+            </section>
+        </aside>
     </div>
-    
+</body>
 
-
-    
-
-
-
-
-  
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
-  
-
-  
-
-    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
-
-  </body>
 </html>
