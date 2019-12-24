@@ -70,7 +70,7 @@ code {
   content: '';
 }
 .header .links ul li a {
-  color: #777;
+  color: #120057;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -241,7 +241,7 @@ code {
 .post .post-content {
   position: relative;
   color: #777;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5em;
   text-align: left;
@@ -305,7 +305,7 @@ code {
 .aside-section h1 {
   font: 1.25em/1.2 Lora;
   margin: 0.67em 0;
-  color: #777;
+  color: #120057;
 }
 .aside-section h1:before {
   content: '';
