@@ -111,12 +111,12 @@
         </div>
     </header>
 
-    <div class="post-content"><div id="cplayer-66350524"></div>
+    <div class="post-content"><div id="cplayer-98822196"></div>
     <script>
       (function(){
         function loadcplayer() {
           if (typeof window.cplayerList === 'undefined') window.cplayerList = {};
-          if (typeof window.cplayerList["cplayer-66350524"] !== 'undefined') return;
+          if (typeof window.cplayerList["cplayer-98822196"] !== 'undefined') return;
           if (!cplayer.prototype.add163) cplayer.prototype.add163 = function add163(id) {
             if (!id) throw new Error("Unable Property.");
             return fetch("https://music.huaji8.top/?id=" + id).then(function(res){return res.json()}).then(function(data){
@@ -133,9 +133,9 @@
             }.bind(this))
           }
 
-          window.cplayerList["cplayer-66350524"] = new cplayer({
-            element: document.getElementById("cplayer-66350524"),
-            playlist: [{"name":"The Mystic Forest","src":"file:///F:/Hexo/source/_posts/The Mystic Forest/06 - The Mystic Forest.mp3"}],
+          window.cplayerList["cplayer-98822196"] = new cplayer({
+            element: document.getElementById("cplayer-98822196"),
+            playlist: [{"name":"The Mystic Forest","poster":"http://soundtrackcentral.com/images/albums-full/finalfantasy6_pianocollections.png","src":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcmczYXRoLTl6UVJncjk1c3V0VDBObWFJN2RXcGc/ZT1TRUdiMno=.mp3"}],
             generateBeforeElement: true,
             deleteElementAfterGenerate: true,
             autoplay: true
@@ -156,6 +156,7 @@
       })()
     </script>
 	
+
 <p><em>在里面一定要当心，慎防幽灵把你引走。</em>每当人们提起森林时，他们一定会说这句话。每年都会有人踏进幽深茂密的森林里，无论是当地人还是外来旅客。他们当中的大多数会毫发无损地出来，也有一小部分人进去之后便杳无音讯，还有一些人虽然回来了，却会讲述最匪夷所思的、梦境一般的故事。这些故事犹如幽灵，把更多的人引入森林。</p>
 <p>肥美的野味、繁茂的植被、遍布的遗迹——这一切都和其他不为人知的秘密一同被森林揽入怀中，如同母亲一般藏匿与守护。</p>
 <p>我们的母亲开车出收费站时，我的妹妹拽了拽我的袖子，悄声问我，我们在这里是不是真的没有问题。我同样悄声地否定，希望能安慰她——和自己。加上同行的另外两家人，我们一共十一个人，而不是一个。他们都说森林只根据一个人的渴望来制造幽灵，那如果我们一直待在一起，森林就不会知道应该参照谁的……吧？她握住我的手，因为紧张，我们两人的手冰凉。车外的春天沐浴在下午温暖明媚的阳光中，而车内的后排依旧残留着清晨的萧寒。</p>
@@ -177,8 +178,53 @@
         </div>
     </header>
 
-    <div class="post-content"><p><em>Beware when alone inside, lest the Phantoms lure you astray.</em> This is what they always say about the Forest. Every year people both local and foreign enter under its twilight canopy. Many walk out unscathed; a few are never found again; some come back, and tell the strangest stories, possible only in dreams, luring, almost like the Phantoms, more people inside.  </p>
-<p>Rich games, flourishing plants, scattering ruins—these the Forest held within its bosom along with who knows what other secrets, hiding and protecting them like a mother.</p>
+    <div class="post-content"><div id="cplayer-30979489"></div>
+    <script>
+      (function(){
+        function loadcplayer() {
+          if (typeof window.cplayerList === 'undefined') window.cplayerList = {};
+          if (typeof window.cplayerList["cplayer-30979489"] !== 'undefined') return;
+          if (!cplayer.prototype.add163) cplayer.prototype.add163 = function add163(id) {
+            if (!id) throw new Error("Unable Property.");
+            return fetch("https://music.huaji8.top/?id=" + id).then(function(res){return res.json()}).then(function(data){
+              let obj = {
+                name: data.info.songs[0].name,
+                artist: data.info.songs[0].ar.map(function(ar){ return ar.name }).join(','),
+                poster: data.pic.url,
+                lyric: data.lyric.lyric,
+                sublyric: data.lyric.tlyric,
+                src: data.url.url
+              }
+              this.add(obj);
+              return obj;
+            }.bind(this))
+          }
+
+          window.cplayerList["cplayer-30979489"] = new cplayer({
+            element: document.getElementById("cplayer-30979489"),
+            playlist: [{"name":"The Mystic Forest","poster":"http://soundtrackcentral.com/images/albums-full/finalfantasy6_pianocollections.png","src":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcmczYXRoLTl6UVJncjk1c3V0VDBObWFJN2RXcGc/ZT1TRUdiMno=.mp3"}],
+            generateBeforeElement: true,
+            deleteElementAfterGenerate: true,
+            autoplay: true
+          });
+
+          
+        }
+        
+        if (typeof window.cplayer === 'undefined' && !document.getElementById("cplayer-script")) {
+          var js = document.createElement("script");
+          js.src = 'https://cdn.jsdelivr.net/gh/MoePlayer/cPlayer/dist/cplayer.js';
+          js.id = "cplayer-script";
+          js.addEventListener("load", loadcplayer);
+          document.body.appendChild(js);
+        } else {
+          window.addEventListener("load", loadcplayer);
+        }
+      })()
+    </script>
+	
+<p><em>Beware when alone inside, lest the Phantoms lure you astray.</em> This is what they always say about the Forest. Every year people both local and foreign enter under its twilight canopy. Many walk out unscathed; a few are never found again; some come back, and tell the strangest stories, possible only in dreams, luring, almost like the Phantoms, more people inside.</p>
+<p>Rich games, flourishing plants, scattering ruins---these the Forest held within its bosom along with who knows what other secrets, hiding and protecting them like a mother.</p>
           <div class="read-more">
             <a href="/2020/08/09/The%20Mystic%20Forest/" class="read-more-link">Read more..</a>
           </div>
