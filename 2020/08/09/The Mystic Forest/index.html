@@ -46,7 +46,9 @@
 </script>
 
     <title>The Mystic Forest - Writer's Block</title>
-  <meta name="generator" content="Hexo 5.1.1"></head>
+  <meta name="generator" content="Hexo 5.1.1"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
@@ -111,51 +113,26 @@
     </header>
 
     <div class="post-content">
-    <div id="cplayer-98306062"></div>
-    <script>
-      (function(){
-        function loadcplayer() {
-          if (typeof window.cplayerList === 'undefined') window.cplayerList = {};
-          if (typeof window.cplayerList["cplayer-98306062"] !== 'undefined') return;
-          if (!cplayer.prototype.add163) cplayer.prototype.add163 = function add163(id) {
-            if (!id) throw new Error("Unable Property.");
-            return fetch("https://music.huaji8.top/?id=" + id).then(function(res){return res.json()}).then(function(data){
-              let obj = {
-                name: data.info.songs[0].name,
-                artist: data.info.songs[0].ar.map(function(ar){ return ar.name }).join(','),
-                poster: data.pic.url,
-                lyric: data.lyric.lyric,
-                sublyric: data.lyric.tlyric,
-                src: data.url.url
-              }
-              this.add(obj);
-              return obj;
-            }.bind(this))
-          }
-
-          window.cplayerList["cplayer-98306062"] = new cplayer({
-            element: document.getElementById("cplayer-98306062"),
-            playlist: [{"name":"The Mystic Forest","poster":"http://soundtrackcentral.com/images/albums-full/finalfantasy6_pianocollections.png","src":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcmczYXRoLTl6UVJncjk1c3V0VDBObWFJN2RXcGc/ZT05UEVORGM=.mp3"}],
-            generateBeforeElement: true,
-            deleteElementAfterGenerate: true,
-            autoplay: false
+        <div id="aplayer-LVWBKetN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-LVWBKetN"),
+            narrow: false,
+            autoplay: true,
+            showlrc: false,
+            music: {
+              title: "The Mystic Forest",
+              author: "Reiko Nomura",
+              url: "06 - The Mystic Forest.mp3",
+              pic: "/2020/08/09/The%20Mystic%20Forest/coverart.png",
+              lrc: ""
+            }
           });
-
-          
-        }
-        
-        if (typeof window.cplayer === 'undefined' && !document.getElementById("cplayer-script")) {
-          var js = document.createElement("script");
-          js.src = 'https://cdn.jsdelivr.net/gh/MoePlayer/cPlayer/dist/cplayer.js';
-          js.id = "cplayer-script";
-          js.addEventListener("load", loadcplayer);
-          document.body.appendChild(js);
-        } else {
-          window.addEventListener("load", loadcplayer);
-        }
-      })()
-    </script>
-	
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
 <p><em>Beware when alone inside, lest the Phantoms lure you astray.</em> This is what they always say about the Forest. Every year people both local and foreign enter under its twilight canopy. Many walk out unscathed; a few are never found again; some come back, and tell the strangest stories, possible only in dreams, luring, almost like the Phantoms, more people inside.</p>
 <p>Rich games, flourishing plants, scattering ruins---these the Forest held within its bosom along with who knows what other secrets, hiding and protecting them like a mother.</p>
 <a id="more"></a>
